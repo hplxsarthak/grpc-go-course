@@ -27,9 +27,9 @@ func doGreetManyTimes (c pb.GreetServiceClient){
 			break
 		}
 
-		// if err != nil {
-		// 	log.Fatalf("Error while reading the stream: %v\n", err)
-		// }
+		if err != nil {
+			log.Fatalf("Error while reading the stream: %v\n", err)
+		}
 
 		log.Printf("GreetManyTimes: %s\n", msg.Result)
 	}
