@@ -9,5 +9,5 @@ import "primes.proto";
 
 service CalculatorService{
     rpc sum(SumRequest) returns (SumResponse);
-    rpc  Primes (PrimeRequest) returns (PrimeResponse);
+    rpc  Primes (PrimeRequest) returns (stream PrimeResponse);
 }
