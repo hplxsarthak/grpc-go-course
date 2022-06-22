@@ -12,7 +12,7 @@ func doPrimes (c pb.CalculatorServiceClient) {
 	log.Printf("doPrimes was invoked")
 
 	req := &pb.PrimeRequest{
-		Number: 15,
+		Number: 120,
 	}
 
 	stream,err := c.Primes(context.Background(), req)
@@ -31,7 +31,8 @@ func doPrimes (c pb.CalculatorServiceClient) {
 			log.Fatalf("Error while reading the stream: %v\n", err)
 		}
 
-		log.Fatalf("Primes: %d\n", res.Result)
+		log.Printf("Primes: %d\n", res.Result)
+		
 	}
 	
 }

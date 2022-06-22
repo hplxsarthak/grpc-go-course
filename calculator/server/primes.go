@@ -23,6 +23,7 @@ func (s *Server) Primes(in *pb.PrimeRequest, stream pb.CalculatorService_PrimesS
 		}else {
 			divisor++
 		}
+		
 	}
 
 	return nil
